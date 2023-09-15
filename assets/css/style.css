@@ -14,3 +14,10 @@ body {
     /* Gives images circular border */
     border-radius: 50%;
 }
+
+.player-choice {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
