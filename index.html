@@ -7,9 +7,12 @@
     <!-- Tags for search engines -->
     <meta
       name="description"
-      content="Play Rock Paper Scissors (with some extra bits thrown in!) against a computer"
+      content="Play Rock Paper Scissors (with some extra bits thrown in!) against a computer."
     />
-    <meta name="keywords" content="Rock Paper Scissors, game, vs, verses" />
+    <meta
+      name="keywords"
+      content="rock paper scissors, game, vs, verses, rock, paper, scissors"
+    />
     <!-- Title -->
     <title>Rock Paper Scissors 7 Ways</title>
     <!--Favicon -->
@@ -41,22 +44,25 @@
 
     <!-- Game Area -->
     <div class="play-area">
-        <div class="choice-area">
-            <button data-type="rock" class="btn btn-rock"></button>
-            <button data-type="paper" class="btn btn-paper"></button>
-            <button data-type="scissors" class="btn btn-scissors"></button>
-            <button data-type="fire" class="btn btn-fire"></button>
-            <button data-type="water" class="btn btn-water"></button>
-            <button data-type="air" class="btn btn-air"></button>
-            <button data-type="sponge" class="btn btn-sponge"></button>
-        </div>
+      <div class="player-choice">
+        <button data-type="rock" class="btn rock"></button>
+        <button data-type="paper" class="btn paper"></button>
+        <button data-type="scissors" class="btn scissors"></button>
+        <button data-type="fire" class="btn fire"></button>
+        <button data-type="water" class="btn water"></button>
+        <button data-type="air" class="btn air"></button>
+        <button data-type="sponge" class="btn sponge"></button>
+      </div>
     </div>
 
     <!-- Score Area -->
     <div class="tally-area">
-        <p class="scores">P1 <span id="player">0</span></p>
-        <p class="scores">Comp. <span id="computer">0</span></p>
+      <h2 class="scores">P1 <span id="player">0</span></h2>
+      <h2 class="scores">Computer <span id="computer">0</span></h2>
     </div>
+
+    <!-- Reset -->
+    <div class="reset-area"></div>
 
     <!-- Font Awesome Kit -->
     <script
