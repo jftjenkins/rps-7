@@ -7,3 +7,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Game Image Buttons */
+.image {
+    width: 100%;
+    /* Gives images circular border */
+    border-radius: 50%;
+}
