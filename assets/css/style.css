@@ -1,11 +1,17 @@
 /* General Style */
-
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
 }
 
 /* Game Image Buttons */
@@ -19,7 +25,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .player-choice img {
@@ -44,18 +50,13 @@ img {
     border: 1px solid transparent;
 }
 
+.player-choice .btn:focus,
+.player-choice .btn:hover {
+    background-color: grey;
+}
+
 /* Gives images background that did not have one */
-.paper {
-    background: white;
-    border-radius: 50%;
-}
-
-.sponge {
-    background: white;
-    border-radius: 50%;
-}
-
-.air {
+button {
     background: white;
     border-radius: 50%;
 }
