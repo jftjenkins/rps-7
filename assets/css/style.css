@@ -17,18 +17,20 @@ body {
 
 .player-choice {
     display: flex;
-    width: 50vw;
     justify-content: space-evenly;
     flex-direction: row;
-}
-
-.btn {
-    border: 1px solid transparent;
 }
 
 .computer-choice {
     display: flex;
-    width: 50vw;
     justify-content: space-evenly;
     flex-direction: row;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    border: 1px solid transparent;
 }
