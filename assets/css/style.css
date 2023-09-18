@@ -21,10 +21,18 @@ body {
     flex-direction: row;
 }
 
+.player-choice img {
+    max-height: 1000px;
+}
+
 .computer-choice {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+}
+
+.computer-choice img {
+    max-height: 1000px;
 }
 
 img {
@@ -33,4 +41,20 @@ img {
 
 .btn {
     border: 1px solid transparent;
+}
+
+/* Gives images background that did not have one */
+.paper {
+    background: white;
+    border-radius: 50%;
+}
+
+.sponge {
+    background: white;
+    border-radius: 50%;
+}
+
+.air {
+    background: white;
+    border-radius: 50%;
 }
