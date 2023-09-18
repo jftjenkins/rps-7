@@ -19,10 +19,11 @@ body {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    padding-bottom: 20px;
 }
 
 .player-choice img {
-    max-height: 1000px;
+    max-height: 500px;
 }
 
 .computer-choice {
@@ -32,7 +33,7 @@ body {
 }
 
 .computer-choice img {
-    max-height: 1000px;
+    max-height: 500px;
 }
 
 img {
@@ -57,4 +58,11 @@ img {
 .air {
     background: white;
     border-radius: 50%;
+}
+
+.tally-area {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
 }
