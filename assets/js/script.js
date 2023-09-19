@@ -1,3 +1,24 @@
+let playerScore = 0
+let computerScore = 0
+
+function increasePlayerScore() {
+    playerScore++;
+    updateScoreBoard();
+}
+
+function increaseComputerScore() {
+    computerScore++;
+    updateScoreBoard();
+}
+
+function updateScoreBoard() {
+    const playerScoreElement = document.getElementById('player');
+    const computerScoreElement = document.getElementById('computer');
+
+    playerScoreElement.textContent = `${playerScore}`;
+    computerScoreElement.textContent = `${computerScore}`;
+}
+
 function play(playerChoice) {
     const choices = ['rock', 'paper', 'scissors', 'water', 'air', 'fire', 'sponge'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -15,28 +36,12 @@ function play(playerChoice) {
         (playerChoice === 'fire' && (computerChoice === 'scissors' || computerChoice === 'paper' || computerChoice === 'sponge')) ||
         (playerChoice === 'sponge' && (computerChoice === 'paper' || computerChoice === 'air' || computerChoice === 'water'))
     ) {
-        alert("You win!");
+        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. You win!`);
         increasePlayerScore();
     } else {
-        alert("Computer wins!");
+        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`);
         increaseComputerScore();
     }
-}
-
-function computerChoice() {
-
-}
-
-function checkResult() {
-
-}
-
-function increasePlayerScore() {
-
-}
-
-function increaseComputerScore() {
-
 }
 
 function easyMode() {
