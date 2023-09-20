@@ -2,6 +2,9 @@
 let playerScore = 0;
 let computerScore = 0;
 
+// Score needed to be reached for player or computer to win game
+const WINNING_SCORE = 10;
+
 const CHOICE_WIN_COMBINATIONS = {
     "rock": ["scissors", "fire", "sponge"],
     "paper": ["air", "rock", "water"],
@@ -53,6 +56,20 @@ function generateComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
+/**
+ * Checks if player or computer has reached score of 10.
+ * Once player or computer reaches 10, resets game.
+ */
+function checkForWinner() {
+    if (playerScore >= WINNING_SCORE) {
+        alert(`You win the game! Player: ${playerScore} - Computer: ${computerScore}`);
+        resetGame();
+    } else if (computerScore >= WINNING_SCORE) {
+        alert(`Computer wins the game! Player: ${playerScore} - Computer: ${computerScore}`);
+        resetGame();
+    }
+}
+
 function play(playerChoice) {
     const computerChoice = generateComputerChoice();
 
@@ -71,4 +88,5 @@ function play(playerChoice) {
         );
         increaseComputerScore();
     }
+    checkForWinner();
 }
