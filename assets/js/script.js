@@ -2,52 +2,73 @@
 let playerScore = 0;
 let computerScore = 0;
 
-// Updates score board
+const CHOICE_WIN_COMBINATIONS = {
+    "rock": ["scissors", "fire", "sponge"],
+    "paper": ["air", "rock", "water"],
+    "scissors": ["air", "paper", "sponge"],
+    "fire": ["scissors", "paper", "sponge"],
+    "water": ["rock", "fire", "scissors"],
+    "air": ["fire", "rock", "water"],
+    "sponge": ["paper", "air", "water"],
+};
+
+/**
+ * Updates player score and UI
+ */
 function increasePlayerScore() {
     playerScore++;
     updateScoreBoard();
 }
 
+/**
+ * Updates computer score and UI
+ */
 function increaseComputerScore() {
     computerScore++;
     updateScoreBoard();
 }
 
+/**
+ * Resets score board
+ */
 function resetGame() {
     playerScore = 0;
     computerScore = 0;
     updateScoreBoard();
 }
 
+/**
+ * Updates UI
+ */
 function updateScoreBoard() {
-    const playerScoreElement = document.getElementById('player');
-    const computerScoreElement = document.getElementById('computer');
+    const playerScoreElement = document.getElementById("player");
+    const computerScoreElement = document.getElementById("computer");
 
     playerScoreElement.textContent = `${playerScore}`;
     computerScoreElement.textContent = `${computerScore}`;
 }
 
-function play(playerChoice) {
-    const choices = ['rock', 'paper', 'scissors', 'water', 'air', 'fire', 'sponge'];
-    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+function generateComputerChoice() {
+    const choices = Object.keys(CHOICE_WIN_COMBINATIONS);
+    return choices[Math.floor(Math.random() * choices.length)];
+}
 
-    let result = '';
+function play(playerChoice) {
+    const computerChoice = generateComputerChoice();
 
     if (playerChoice === computerChoice) {
-        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`);
-    } else if (
-        (playerChoice === 'rock' && (computerChoice === 'scissors' || computerChoice === 'fire' || computerChoice === 'sponge')) ||
-        (playerChoice === 'paper' && (computerChoice === 'air' || computerChoice === 'rock' || computerChoice === 'water')) ||
-        (playerChoice === 'scissors' && (computerChoice === 'air' || computerChoice === 'paper' || computerChoice === 'sponge')) ||
-        (playerChoice === 'water' && (computerChoice === 'rock' || computerChoice === 'fire' || computerChoice === 'scissors')) ||
-        (playerChoice === 'air' && (computerChoice === 'fire' || computerChoice === 'rock' || computerChoice === 'water')) ||
-        (playerChoice === 'fire' && (computerChoice === 'scissors' || computerChoice === 'paper' || computerChoice === 'sponge')) ||
-        (playerChoice === 'sponge' && (computerChoice === 'paper' || computerChoice === 'air' || computerChoice === 'water'))
-    ) {
-        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. You win!`);
+        alert(
+            `You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`
+        );
+    } else if (CHOICE_WIN_COMBINATIONS[playerChoice].includes(computerChoice)) {
+        alert(
+            `You chose ${playerChoice}, computer chose ${computerChoice}. You win!`
+        );
         increasePlayerScore();
     } else {
-        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`);
+        alert(
+            `You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`
+        );
         increaseComputerScore();
     }
 }

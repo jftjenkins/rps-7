@@ -7,13 +7,6 @@ body {
     padding: 0;
 }
 
-.difficulty {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-bottom: 20px;
-}
-
 /* Game Image Buttons */
 .image {
     width: 100%;
@@ -32,16 +25,6 @@ body {
     max-height: 500px;
 }
 
-.computer-choice {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-
-.computer-choice img {
-    max-height: 500px;
-}
-
 img {
     max-width: 100%;
 }
@@ -56,8 +39,7 @@ img {
 }
 
 /* Gives images background that did not have one */
-.player-choice>button,
-.computer-choice>button {
+.player-choice>button {
     background: white;
     border-radius: 50%;
 }
