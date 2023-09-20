@@ -11,6 +11,12 @@ function increaseComputerScore() {
     updateScoreBoard();
 }
 
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    updateScoreBoard();
+}
+
 function updateScoreBoard() {
     const playerScoreElement = document.getElementById('player');
     const computerScoreElement = document.getElementById('computer');
