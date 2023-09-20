@@ -69,6 +69,7 @@ img {
     justify-content: space-evenly;
 }
 
+/* Reset button */
 .reset-area {
     display: flex;
     justify-content: center;

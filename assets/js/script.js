@@ -1,6 +1,8 @@
-let playerScore = 0
-let computerScore = 0
+// Initialize game mode & scores
+let playerScore = 0;
+let computerScore = 0;
 
+// Updates score board
 function increasePlayerScore() {
     playerScore++;
     updateScoreBoard();
@@ -32,7 +34,7 @@ function play(playerChoice) {
     let result = '';
 
     if (playerChoice === computerChoice) {
-        result = "It's a tie!";
+        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`);
     } else if (
         (playerChoice === 'rock' && (computerChoice === 'scissors' || computerChoice === 'fire' || computerChoice === 'sponge')) ||
         (playerChoice === 'paper' && (computerChoice === 'air' || computerChoice === 'rock' || computerChoice === 'water')) ||
@@ -48,16 +50,4 @@ function play(playerChoice) {
         alert(`You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`);
         increaseComputerScore();
     }
-}
-
-function easyMode() {
-
-}
-
-function normalMode() {
-
-}
-
-function hardMode() {
-
 }
