@@ -64,10 +64,10 @@ function generateComputerChoice() {
  */
 function checkForWinner() {
     if (playerScore >= WINNING_SCORE) {
-        alert(`You win the game! Player: ${playerScore} - Computer: ${computerScore}`);
+        resultMessage = `You win the game! Player: ${playerScore} - Computer: ${computerScore}`;
         resetGame();
     } else if (computerScore >= WINNING_SCORE) {
-        alert(`Computer wins the game! Player: ${playerScore} - Computer: ${computerScore}`);
+        resultMessage = `Computer wins the game! Player: ${playerScore} - Computer: ${computerScore}`;
         resetGame();
     }
 }

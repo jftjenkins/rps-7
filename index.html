@@ -62,53 +62,31 @@
       <!-- Player Choice Section -->
       <div class="player-choice">
         <button data-type="rock" class="btn rock" onclick="play('rock')">
-          <img
-            class="image"
-            src="assets/images/rock.png"
-            alt="Cartoon Rock"
-          />
+            <img class="image" src="assets/images/rock.png" alt="Cartoon Rock" />
         </button>
-        <button data-type="paper" class="btn paper" onclick="play('paper')">
-          <img
-            class="image"
-            src="assets/images/paper.png"
-            alt="Crumpled Paper"
-          />
-        </button>
-        <button data-type="scissors" class="btn scissors" onclick="play('scissors')">
-          <img
-            class="image"
-            src="assets/images/scissors.png"
-            alt="Cartoon Scissors"
-          />
-        </button>
+
         <button data-type="fire" class="btn fire" onclick="play('fire')">
-          <img
-            class="image"
-            src="assets/images/fire.png"
-            alt="Cartoon Fire"
-          />
+            <img class="image" src="assets/images/fire.png" alt="Cartoon Fire" />
         </button>
-        <button data-type="water" class="btn water" onclick="play('water')">
-          <img
-            class="image"
-            src="assets/images/water.png"
-            alt="Cartoon Water"
-          />
+
+        <button data-type="scissors" class="btn scissors" onclick="play('scissors')">
+            <img class="image" src="assets/images/scissors.png" alt="Cartoon Scissors" />
         </button>
-        <button data-type="air" class="btn air" onclick="play('air')">
-          <img
-            class="image"
-            src="assets/images/air.png"
-            alt="Cartoon Wind/Air"
-          />
-        </button>
+
         <button data-type="sponge" class="btn sponge" onclick="play('sponge')">
-          <img
-            class="image"
-            src="assets/images/sponge.png"
-            alt="Cartoon Sponge"
-          />
+            <img class="image" src="assets/images/sponge.png" alt="Cartoon Sponge" />
+        </button>
+
+        <button data-type="paper" class="btn paper" onclick="play('paper')">
+            <img class="image" src="assets/images/paper.png" alt="Crumpled Paper" />
+        </button>
+
+        <button data-type="air" class="btn air" onclick="play('air')">
+            <img class="image" src="assets/images/air.png" alt="Cartoon Wind/Air" />
+        </button>
+
+        <button data-type="water" class="btn water" onclick="play('water')">
+            <img class="image" src="assets/images/water.png" alt="Cartoon Water" />
         </button>
       </div>
 
@@ -116,6 +94,17 @@
     <div class="tally-area">
       <h2 class="scores">P1: <span id="player">0</span></h2>
       <h2 class="scores">Computer: <span id="computer">0</span></h2>
+    </div>
+
+    <!-- Rules Area -->
+    <div class="rules">
+        <p> <b>ROCK</b> POUNDS OUT <b>FIRE</b>, CRUSHES <b>SCISSORS</b> & <b>SPONGE</b>. <br>
+        <b>FIRE</b> MELTS <b>SCISSORS</b>, BURNS <b>PAPER</b> & <b>SPONGE</b>. <br>
+        <b>SCISSORS</b> SWISH THROUGH <b>AIR</b>, CUT <b>PAPER</b> & <b>SPONGE</b>. <br>
+        <b>SPONGE</b> SOAKS <b>PAPER</b>, USES <b>AIR</b> POCKETS, ABSORBS <b>WATER</b>. <br>
+        <b>PAPER</b> FANS <b>AIR</b>, COVERS <b>ROCK</b>, FLOATS ON <b>WATER</b>. <br>
+        <b>AIR</b> BLOWS OUT <b>FIRE</b>, ERODES <b>ROCK</b>, EVAPORATES <b>WATER</b>. <br>
+        <b>WATER</b> ERODES <b>ROCK</b>, PUTS OUT <b>FIRE</b>, RUSTS <b>SCISSORS</b>.</p>
     </div>
 
     <!-- Reset -->
