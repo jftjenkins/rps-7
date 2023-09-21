@@ -71,34 +71,32 @@ function checkForWinner() {
 }
 
 /**
- * Updates the choice display boxes with images
- */
-function updateChoiceDisplay(playerChoice, computerChoice) {
-    const playerChoiceImage = document.getElementById("playerChoiceImage");
-    const computerChoiceImage = document.getElementById("computerChoiceImage");
-
-    playerChoiceImage.src = `assets/images/${playerChoice}.png`;
-    computerChoiceImage.src = `assets/images/${computerChoice}.png`;
-}
-
-/**
  * Handles the game logic when the player makes a choice
  */
 function play(playerChoice) {
     const computerChoice = generateComputerChoice();
+    const playerChoiceImage = document.getElementById("playerChoiceImage");
+    const computerChoiceImage = document.getElementById("computerChoiceImage");
+
+    // Set the image source for player and computer choices
+    playerChoiceImage.src = `assets/images/${playerChoice}.png`;
+    computerChoiceImage.src = `assets/images/${computerChoice}.png`;
 
     if (playerChoice === computerChoice) {
-        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`);
+        resultsMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`;
     } else if (CHOICE_WIN_COMBINATIONS[playerChoice].includes(computerChoice)) {
-        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. You win!`);
+        resultsMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. You win!`;
         increasePlayerScore();
     } else {
-        alert(`You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`);
+        resultsMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`;
         increaseComputerScore();
     }
 
     // Update the choice display boxes
     updateChoiceDisplay(playerChoice, computerChoice);
+
+    // Update the result text box
+    resultText.textContent = resultMessage;
 
     // Check for a winner after each play
     checkForWinner();
