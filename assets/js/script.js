@@ -5,6 +5,7 @@ let computerScore = 0;
 // Score needed to be reached for player or computer to win game
 const WINNING_SCORE = 10;
 
+// Rules for playing the game
 const CHOICE_WIN_COMBINATIONS = {
     "rock": ["scissors", "fire", "sponge"],
     "paper": ["air", "rock", "water"],
@@ -38,6 +39,7 @@ function resetGame() {
     playerScore = 0;
     computerScore = 0;
     updateScoreBoard();
+    resetChoiceImages();
 }
 
 /**
@@ -71,29 +73,40 @@ function checkForWinner() {
 }
 
 /**
+ * Resets choice images to default image on game reset
+ */
+function resetChoiceImages() {
+    const playerChoiceImage = document.getElementById("playerChoiceImage");
+    const computerChoiceImage = document.getElementById("computerChoiceImage");
+
+    playerChoiceImage.src = "assets/images/default.png";
+    computerChoiceImage.src = "assets/images/default.png";
+}
+
+/**
  * Handles the game logic when the player makes a choice
  */
 function play(playerChoice) {
     const computerChoice = generateComputerChoice();
     const playerChoiceImage = document.getElementById("playerChoiceImage");
     const computerChoiceImage = document.getElementById("computerChoiceImage");
+    const resultText = document.getElementById("resultText");
 
     // Set the image source for player and computer choices
     playerChoiceImage.src = `assets/images/${playerChoice}.png`;
     computerChoiceImage.src = `assets/images/${computerChoice}.png`;
 
+    let resultMessage = "";
+
     if (playerChoice === computerChoice) {
-        resultsMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`;
+        resultMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. It's a tie!`;
     } else if (CHOICE_WIN_COMBINATIONS[playerChoice].includes(computerChoice)) {
-        resultsMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. You win!`;
+        resultMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. You win!`;
         increasePlayerScore();
     } else {
-        resultsMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`;
+        resultMessage = `You chose ${playerChoice}, computer chose ${computerChoice}. Computer wins!`;
         increaseComputerScore();
     }
-
-    // Update the choice display boxes
-    updateChoiceDisplay(playerChoice, computerChoice);
 
     // Update the result text box
     resultText.textContent = resultMessage;
