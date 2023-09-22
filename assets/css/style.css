@@ -11,6 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 100%;
 }
 
 /* Choice boxes */
@@ -112,4 +113,40 @@ img {
 
 .reset-button:hover {
     background-color: grey;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+    .play-area {
+        padding: 10px;
+    }
+
+    .choice {
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .player-choice img {
+        max-height: 300px;
+    }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    .play-area {
+        padding: 5px;
+    }
+
+    .choice {
+        width: 100px;
+        height: 100px;
+        margin: 3px;
+        padding: 3px;
+    }
+
+    .player-choice img {
+        max-height: 200px;
+    }
 }
