@@ -43,7 +43,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.375em;
 }
 
 /* Game Image Buttons */
@@ -62,7 +62,7 @@ body {
 }
 
 .player-choice img {
-    max-height: 500px;
+    max-height: 200px;
 }
 
 img {
@@ -71,6 +71,7 @@ img {
 
 .btn {
     border: 1px solid transparent;
+    margin: 0 20px;
 }
 
 .player-choice .btn:focus,
@@ -115,21 +116,31 @@ img {
     background-color: grey;
 }
 
-/* Media query for tablets */
+/* Media query for smaller screens, e.g., tablets and phones */
 @media screen and (max-width: 768px) {
-    .play-area {
-        padding: 10px;
-    }
 
     .choice {
         width: 150px;
         height: 150px;
-        margin: 5px;
+        margin: 5px 0;
         padding: 5px;
     }
 
-    .player-choice img {
-        max-height: 300px;
+    .result-box {
+        font-size: 1em;
+    }
+
+    .scores {
+        margin: 0 20px 10px 20px;
+    }
+
+    .rules p {
+        font-size: 14px;
+    }
+
+    /* Remove margin for button class */
+    .btn {
+        margin: 0;
     }
 }
 
@@ -142,7 +153,7 @@ img {
     .choice {
         width: 100px;
         height: 100px;
-        margin: 3px;
+        margin: 3px 0;
         padding: 3px;
     }
 
