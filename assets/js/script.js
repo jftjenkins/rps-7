@@ -53,6 +53,9 @@ function updateScoreBoard() {
     computerScoreElement.textContent = `${computerScore}`;
 }
 
+/**
+ * @returns random computer choice from CHOICE_WIN_COMBINATIONS
+ */
 function generateComputerChoice() {
     const choices = Object.keys(CHOICE_WIN_COMBINATIONS);
     return choices[Math.floor(Math.random() * choices.length)];
@@ -64,10 +67,10 @@ function generateComputerChoice() {
  */
 function checkForWinner() {
     if (playerScore >= WINNING_SCORE) {
-        resultMessage = `You win the game! Player: ${playerScore} - Computer: ${computerScore}`;
+        alert(`You win the game! Player: ${playerScore} - Computer: ${computerScore}`);
         resetGame();
     } else if (computerScore >= WINNING_SCORE) {
-        resultMessage = `Computer wins the game! Player: ${playerScore} - Computer: ${computerScore}`;
+        alert(`Computer wins the game! Player: ${playerScore} - Computer: ${computerScore}`);
         resetGame();
     }
 }
