@@ -17,7 +17,7 @@ const CHOICE_WIN_COMBINATIONS = {
 };
 
 /**
- * Updates player score and UI
+ * Updates player score and score board
  */
 function increasePlayerScore() {
     playerScore++;
@@ -25,7 +25,7 @@ function increasePlayerScore() {
 }
 
 /**
- * Updates computer score and UI
+ * Updates computer score and score board
  */
 function increaseComputerScore() {
     computerScore++;
@@ -40,10 +40,13 @@ function resetGame() {
     computerScore = 0;
     updateScoreBoard();
     resetChoiceImages();
+    // Reset the result text
+    const resultText = document.getElementById("resultText");
+    resultText.textContent = "Results will appear here!";
 }
 
 /**
- * Updates UI
+ * Updates score board
  */
 function updateScoreBoard() {
     const playerScoreElement = document.getElementById("player");
@@ -67,12 +70,30 @@ function generateComputerChoice() {
  */
 function checkForWinner() {
     if (playerScore >= WINNING_SCORE) {
-        alert(`You win the game! Player: ${playerScore} - Computer: ${computerScore}`);
+        displayWinnerModal("Player");
         resetGame();
     } else if (computerScore >= WINNING_SCORE) {
-        alert(`Computer wins the game! Player: ${playerScore} - Computer: ${computerScore}`);
+        displayWinnerModal("Computer");
         resetGame();
     }
+}
+
+/**
+ * Displays the winner modal with the given winner name.
+ */
+function displayWinnerModal(winner) {
+    const winnerModal = document.getElementById("winnerModal");
+    const winnerText = document.getElementById("winnerText");
+    winnerText.textContent = `${winner} wins the game!`;
+    winnerModal.style.display = "block";
+}
+
+/**
+ * Closes the winner modal and resets the game.
+ */
+function hideWinnerModal() {
+    const winnerModal = document.getElementById("winnerModal");
+    winnerModal.style.display = "none";
 }
 
 /**
@@ -116,4 +137,12 @@ function play(playerChoice) {
 
     // Check for a winner after each play
     checkForWinner();
+}
+
+/**
+ * Restarts the game when the restart button in the winner modal is clicked.
+ */
+function restartGame() {
+    hideWinnerModal();
+    resetGame();
 }

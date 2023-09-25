@@ -69,7 +69,7 @@
      </div>
 
      <div class="result-box">
-        <p id="resultText"></p>
+        <p id="resultText">Results will appear here!</p>
      </div>
 
       <!-- Player Choice Section -->
@@ -111,6 +111,15 @@
 
     <!-- Reset -->
     <div class="reset-area"><button class='reset-button' onclick="resetGame()"><b>RESET</b></button></div>
+
+    <!-- Winner Modal -->
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <h2 id="winnerText"></h2>
+            <button class="restart-button" onclick="restartGame()">Restart</button>
+        </div>
+    </div>
+
 
     <!-- Font Awesome Kit -->
     <script

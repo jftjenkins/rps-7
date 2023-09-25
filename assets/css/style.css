@@ -135,6 +135,44 @@ img {
     background-color: grey;
 }
 
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    text-align: center;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+/* Restart Button */
+.restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #005C87;
+}
+
 /* Media query for smaller screens, e.g., tablets and phones */
 @media screen and (max-width: 768px) {
 
