@@ -15,6 +15,13 @@ body {
 }
 
 /* Choice boxes */
+.choice-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
 .choice {
     width: 200px;
     height: 200px;
@@ -27,6 +34,10 @@ body {
     background-color: white;
     border-radius: 10px;
     vertical-align: top;
+}
+
+.box-label {
+    font-weight: bold;
 }
 
 .choice img {
@@ -94,7 +105,7 @@ img {
 }
 
 .scores {
-    margin: 0 50px 10px 50px;
+    margin: 0 30px 10px 30px;
 }
 
 /* Reset button */
