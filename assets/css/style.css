@@ -31,7 +31,7 @@ body {
     padding: 10px;
     text-align: center;
     box-sizing: border-box;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     vertical-align: top;
 }
@@ -49,7 +49,7 @@ body {
 
 /* Result box */
 .result-box {
-    border: 2px solid black;
+    border: 2px solid #000;
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -67,13 +67,32 @@ body {
 .player-choice {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: wrap;
+    flex-wrap: wrap;
     padding-bottom: 40px;
     margin-top: 20px;
 }
 
+.player-choice>button {
+    width: 200px;
+    height: 200px;
+    margin: 5px 0;
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin: 0 20px;
+}
+
+.player-choice>button:focus,
+.player-choice>button:hover {
+    background-color: #808080;
+    border: 2px solid #000;
+}
+
 .player-choice img {
-    max-height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 img {
@@ -83,17 +102,6 @@ img {
 .btn {
     border: 1px solid transparent;
     margin: 0 20px;
-}
-
-.player-choice .btn:focus,
-.player-choice .btn:hover {
-    background-color: grey;
-}
-
-/* Gives images background that did not have one */
-.player-choice>button {
-    background: white;
-    border-radius: 50%;
 }
 
 /* Score area */
@@ -141,6 +149,18 @@ img {
         font-size: 1em;
     }
 
+    .player-choice>button {
+        width: 100px;
+        height: 100px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+
+    .player-choice img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
     .scores {
         margin: 0 20px 10px 20px;
     }
@@ -172,8 +192,16 @@ img {
         padding: 3px;
     }
 
+    .player-choice>button {
+        width: 80px;
+        height: 80px;
+        margin: 5px 0;
+        padding: 5px;
+    }
+
     .player-choice img {
-        max-height: 200px;
+        max-height: 100%;
+        max-width: 100%;
     }
 
     .box-label {
