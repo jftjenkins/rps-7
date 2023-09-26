@@ -44,64 +44,105 @@
 
     <!-- Rules Area -->
     <div class="rules">
-        <p> <b>ROCK</b> POUNDS OUT <b>FIRE</b>, CRUSHES <b>SCISSORS</b> & <b>SPONGE</b>. <br>
-        <b>FIRE</b> MELTS <b>SCISSORS</b>, BURNS <b>PAPER</b> & <b>SPONGE</b>. <br>
-        <b>SCISSORS</b> SWISH THROUGH <b>AIR</b>, CUT <b>PAPER</b> & <b>SPONGE</b>. <br>
-        <b>SPONGE</b> SOAKS <b>PAPER</b>, USES <b>AIR</b> POCKETS, ABSORBS <b>WATER</b>. <br>
-        <b>PAPER</b> FANS <b>AIR</b>, COVERS <b>ROCK</b>, FLOATS ON <b>WATER</b>. <br>
-        <b>AIR</b> BLOWS OUT <b>FIRE</b>, ERODES <b>ROCK</b>, EVAPORATES <b>WATER</b>. <br>
-        <b>WATER</b> ERODES <b>ROCK</b>, PUTS OUT <b>FIRE</b>, RUSTS <b>SCISSORS</b>.</p>
+      <p>
+        <b>ROCK</b> POUNDS OUT <b>FIRE</b>, CRUSHES <b>SCISSORS</b> &
+        <b>SPONGE</b>. <br />
+        <b>FIRE</b> MELTS <b>SCISSORS</b>, BURNS <b>PAPER</b> & <b>SPONGE</b>.
+        <br />
+        <b>SCISSORS</b> SWISH THROUGH <b>AIR</b>, CUT <b>PAPER</b> &
+        <b>SPONGE</b>. <br />
+        <b>SPONGE</b> SOAKS <b>PAPER</b>, USES <b>AIR</b> POCKETS, ABSORBS
+        <b>WATER</b>. <br />
+        <b>PAPER</b> FANS <b>AIR</b>, COVERS <b>ROCK</b>, FLOATS ON
+        <b>WATER</b>. <br />
+        <b>AIR</b> BLOWS OUT <b>FIRE</b>, ERODES <b>ROCK</b>, EVAPORATES
+        <b>WATER</b>. <br />
+        <b>WATER</b> ERODES <b>ROCK</b>, PUTS OUT <b>FIRE</b>, RUSTS
+        <b>SCISSORS</b>.
+      </p>
     </div>
 
     <!-- Game Area -->
     <div class="play-area">
-        
-     <!-- Choice Display Boxes -->
-     <div class="choice-box">
+      <!-- Choice Display Boxes -->
+      <div class="choice-box">
         <div id="playerChoice" class="choice">
-            <div class="box-label">Player's Choice</div>
-            <img id="playerChoiceImage" src="assets/images/default.png" alt="Player's Choice" />
+          <div class="box-label">Player's Choice</div>
+          <img
+            id="playerChoiceImage"
+            src="assets/images/default.png"
+            alt="Player's Choice"
+          />
         </div>
         <div id="computerChoice" class="choice">
-            <div class="box-label">Computer's Choice</div>
-            <img id="computerChoiceImage" src="assets/images/default.png" alt="Computer's Choice" />
+          <div class="box-label">Computer's Choice</div>
+          <img
+            id="computerChoiceImage"
+            src="assets/images/default.png"
+            alt="Computer's Choice"
+          />
         </div>
-     </div>
+      </div>
 
-     <div class="result-box">
+      <div class="result-box">
         <p id="resultText">Results will appear here!</p>
-     </div>
+      </div>
 
       <!-- Player Choice Section -->
       <div class="player-choice">
         <button data-type="rock" class="btn rock" onclick="play('rock')">
-            <img class="image" src="assets/images/rock.png" alt="Cartoon Rock" />
+          <img class="image" src="assets/images/rock.png" alt="Cartoon Rock" />
         </button>
 
         <button data-type="fire" class="btn fire" onclick="play('fire')">
-            <img class="image" src="assets/images/fire.png" alt="Cartoon Fire" />
+          <img class="image" src="assets/images/fire.png" alt="Cartoon Fire" />
         </button>
 
-        <button data-type="scissors" class="btn scissors" onclick="play('scissors')">
-            <img class="image" src="assets/images/scissors.png" alt="Cartoon Scissors" />
+        <button
+          data-type="scissors"
+          class="btn scissors"
+          onclick="play('scissors')"
+        >
+          <img
+            class="image"
+            src="assets/images/scissors.png"
+            alt="Cartoon Scissors"
+          />
         </button>
 
         <button data-type="sponge" class="btn sponge" onclick="play('sponge')">
-            <img class="image" src="assets/images/sponge.png" alt="Cartoon Sponge" />
+          <img
+            class="image"
+            src="assets/images/sponge.png"
+            alt="Cartoon Sponge"
+          />
         </button>
 
         <button data-type="paper" class="btn paper" onclick="play('paper')">
-            <img class="image" src="assets/images/paper.png" alt="Crumpled Paper" />
+          <img
+            class="image"
+            src="assets/images/paper.png"
+            alt="Crumpled Paper"
+          />
         </button>
 
         <button data-type="air" class="btn air" onclick="play('air')">
-            <img class="image" src="assets/images/air.png" alt="Cartoon Wind/Air" />
+          <img
+            class="image"
+            src="assets/images/air.png"
+            alt="Cartoon Wind/Air"
+          />
         </button>
 
         <button data-type="water" class="btn water" onclick="play('water')">
-            <img class="image" src="assets/images/water.png" alt="Cartoon Water" />
+          <img
+            class="image"
+            src="assets/images/water.png"
+            alt="Cartoon Water"
+          />
         </button>
       </div>
+    </div>
 
     <!-- Score Area -->
     <div class="tally-area">
@@ -110,16 +151,17 @@
     </div>
 
     <!-- Reset -->
-    <div class="reset-area"><button class='reset-button' onclick="resetGame()"><b>RESET</b></button></div>
+    <div class="reset-area">
+      <button class="reset-button" onclick="resetGame()"><b>RESET</b></button>
+    </div>
 
     <!-- Winner Modal -->
     <div id="winnerModal" class="modal">
-        <div class="modal-content">
-            <h2 id="winnerText"></h2>
-            <button class="restart-button" onclick="restartGame()">Restart</button>
-        </div>
+      <div class="modal-content">
+        <h2 id="winnerText"></h2>
+        <button class="restart-button" onclick="restartGame()">Restart</button>
+      </div>
     </div>
-
 
     <!-- Font Awesome Kit -->
     <script
@@ -129,6 +171,5 @@
 
     <!-- JavaScript link -->
     <script src="assets/js/script.js"></script>
-    
   </body>
 </html>
