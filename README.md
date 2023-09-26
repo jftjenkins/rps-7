@@ -35,4 +35,18 @@ Live URL: <https://jftjenkins.github.io/rps-7/>
 
 - __The Player Choice Area__
 
-  - This area is what the user uses to choose what they will play in each round of the game. When a user hovers over one of the icons, the background of it will turn grey 
+  - This area is what the user uses to choose what they will play in each round of the game. When a user hovers over one of the icons, the background of it will turn grey and the cursor will become the pointed icon to highlight to users what they are choosing.
+
+![The Player Choice Area](assets/images/player%20choice.png)
+
+- __The Results Area and Reset Button__
+
+  - This section keeps track of the player and computer scores throughout the game. It also features a reset button which, if clicked, resets the game for if user's are unhappy with how the game is going.
+
+![Results Area and Reset Button](assets/images/score%20board%20and%20reset.png)
+
+- __Game End Modal__
+
+  - Once either the computer of the player reaches 10 points, a Modal will pop up announcing the winner, with a Restart button bellow it that, when clicked, resets the game back to its original state.
+
+![Game End Modal](assets/images/end%20game.png)
